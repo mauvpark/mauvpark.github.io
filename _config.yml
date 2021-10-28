@@ -28,7 +28,7 @@ twitter_username: none
 github_username:  mauvpark
 
 # Build settings
-remote_theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
