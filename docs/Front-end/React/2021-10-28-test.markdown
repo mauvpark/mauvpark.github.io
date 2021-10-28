@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Test"
+date:   2021-10-28 20:08:05 +0900
+categories: React
+---
+test
+```js
+const foo = () => {
+    console.log("baz");
+    throw new Error("Error!!!");
+}
+```
+
