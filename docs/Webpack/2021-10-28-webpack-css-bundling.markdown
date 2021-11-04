@@ -49,3 +49,7 @@ p {
 > ***뿐만 아니라 chunk 단위로 나누어지게 되면 Webpack은 parent에서 중복되는 chunk가 발견된다고 하더라도 instance를 여러 개 생성하는 것이 아니라 하나만 생성한다고 한다.***
 
 이런 것들을 고려해보았을 때, chunk를 너무 많이 나누게 되면 bundling 폴더의 크기가 증가할 것이라고 생각한다. 따라서 페이지 단위 혹은 Vendor(바뀌지 않는 module: node_modules)와 사용자 Javascript 파일 내지 css 파일로 나누는 것이 loading enhancement에도 좋은 영향을 주고 FOUC(Flash Of Unstyled Content)를 방지하며 bundling 파일도 적절하게 caching(캐싱: splitChunks를 통한 캐싱 방법에 대해 좀 더 알아볼 것)할 수 있지 않나 생각한다. 그리고 이러한 부분들은 Load velocity나 측정치를 보며 직접 확인해야 할 것 같다.
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
