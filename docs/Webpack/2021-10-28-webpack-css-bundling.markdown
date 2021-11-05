@@ -3,7 +3,7 @@ layout: post
 title:  "Webpack css bundling에 관해"
 date:   2021-10-28 20:08:05 +0900
 parent: Webpack
-categories: Webpack
+categories: webpack
 nav_order: 2
 ---
 # Webpack css의 bundling은 어떤 형태로 이루어져야 할까?

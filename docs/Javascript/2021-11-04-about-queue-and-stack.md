@@ -3,7 +3,7 @@ layout: post
 title: "Queue와 Stack의 개념과 예시"
 date: 2021-11-04 19:37:00 +0900
 parent: Javascript
-categories: Javascript, Queue, Stack, Heap
+categories: javascript, queue, stack, heap
 nav_order: 2
 comments: true
 ---
