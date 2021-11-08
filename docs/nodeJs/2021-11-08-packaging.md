@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NPM Packging"
-date: 2021-11-08 15:30:00 +0900
+date: 2021-11-08 17:13:00 +0900
 parent: NodeJs
 categories: node-js, npm
 nav_order: 2
