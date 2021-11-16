@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Typescript Cheat Sheet 3"
+title: "3. Functions"
 date: 2021-11-11 22:20:00 +0900
 parent: Typescript
 categories: typescript, cheat-sheet
@@ -9,7 +9,7 @@ nav_order: 2
 
 # Typescript 메모 3 (Functions)
 
-본 내용은 직접 작성한 내용이 아니며 [Typescript 공식 메뉴얼](https://www.typescriptlang.org/docs/)에 나오는 내용 중 필요한 내용만 발췌해 공부 목적으로 재구성하였습니다.
+본 내용은 [Typescript 공식 메뉴얼](https://www.typescriptlang.org/docs/)을 참고해 나오는 내용 중 필요한 내용만 발췌해 공부 목적으로 **번역 및 재구성**하였습니다.
 
 ## 1. Call Signatures
 

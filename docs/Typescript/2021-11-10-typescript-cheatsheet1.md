@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Typescript Cheat Sheet 1"
+title: "1. Everyday Types"
 date: 2021-11-10 16:45:00 +0900
 parent: Typescript
 categories: typescript, cheat-sheet
