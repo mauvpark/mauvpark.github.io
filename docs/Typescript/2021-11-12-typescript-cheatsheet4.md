@@ -7,6 +7,8 @@ categories: typescript, cheat-sheet
 nav_order: 2
 ---
 
+*2021-11-12 17:00 작성*
+
 # Typescript 메모 4 (Object Types)
 
 본 내용은 [Typescript 공식 메뉴얼](https://www.typescriptlang.org/docs/)을 참고해 나오는 내용 중 필요한 내용만 발췌해 공부 목적으로 **번역 및 재구성**하였습니다.
@@ -504,3 +506,7 @@ distanceFromOrigin(point);
 // 🚫 Argument of type 'readonly [3, 4]' is not assignable to parameter of type '[number, number]'.
 // 🚫 The type 'readonly [3, 4]' is 'readonly' and cannot be assigned to the mutable type '[number, number]'.
 ```
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

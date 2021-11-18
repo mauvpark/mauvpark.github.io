@@ -6,6 +6,9 @@ parent: Webpack
 categories: webpack
 nav_order: 2
 ---
+
+*2021-10-28 20:08 작성*
+
 # Webpack css의 bundling은 어떤 형태로 이루어져야 할까?
 최근 Babel을 공부하다 자연스레 Webpack을 공부하게 되었다. Webpack을 공부하며 Javascript, CSS, HTML, MEDIA 파일이 각각 통합된다는 것을 알게 되었고 여기서 고민이 생겼다. 
 

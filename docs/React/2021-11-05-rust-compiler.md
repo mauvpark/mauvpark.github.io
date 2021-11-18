@@ -8,6 +8,8 @@ nav_order: 2
 comments: true
 ---
 
+*2021-11-05 23:20 작성*
+
 # Rust 컴파일러와 Framework의 방향에 대한 생각
 
 ## 1. Babel

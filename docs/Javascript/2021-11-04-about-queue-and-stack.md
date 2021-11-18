@@ -8,6 +8,8 @@ nav_order: 2
 comments: true
 ---
 
+*2021-11-04 19:37 작성*
+
 # Queue와 Stack의 개념과 예시(+ Heap)
 
 ## 1. 도입

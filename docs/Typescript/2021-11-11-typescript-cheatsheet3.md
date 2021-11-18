@@ -7,6 +7,8 @@ categories: typescript, cheat-sheet
 nav_order: 2
 ---
 
+*2021-11-11 22:20 작성*
+
 # Typescript 메모 3 (Functions)
 
 본 내용은 [Typescript 공식 메뉴얼](https://www.typescriptlang.org/docs/)을 참고해 나오는 내용 중 필요한 내용만 발췌해 공부 목적으로 **번역 및 재구성**하였습니다.
@@ -494,3 +496,7 @@ const f3 = function (): void {
 ## 출처(References)
 
 [How does Construct signatures work?](https://newbedev.com/how-does-interfaces-with-construct-signatures-work)
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
