@@ -5,6 +5,7 @@ date: 2021-11-10 21:50:00 +0900
 parent: Typescript
 categories: typescript, cheat-sheet
 nav_order: 2
+comments: false
 ---
 
 *2021-11-10 21:50 작성*

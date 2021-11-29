@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+comments: true
 ---
 
 ## Who Am I?
@@ -13,3 +14,7 @@ permalink: /about/
 ### Interested: *Rust, Node JS*
 
 ### Hobbies: *Listening to music, Writing short novel, Traveling*
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

@@ -5,7 +5,7 @@ date: 2021-11-05 23:20:00 +0900
 parent: React
 categories: react, rust, nextjs, compiler
 nav_order: 2
-comments: true
+comments: false
 ---
 
 *2021-11-05 23:20 작성*

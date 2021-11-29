@@ -5,7 +5,7 @@ date: 2021-11-04 19:37:00 +0900
 parent: Javascript
 categories: javascript, queue, stack, heap
 nav_order: 2
-comments: true
+comments: false
 ---
 
 *2021-11-04 19:37 작성*
