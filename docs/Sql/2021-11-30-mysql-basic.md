@@ -22,6 +22,7 @@ SQL은 Structured query language를 의미하고 다음의 세 가지를 포함�
 ## 2. MySQL 명령어
 
 ### A. SELECT
+
 | 명령어                       | 설명              |
 | ---------------------------- | ---------------- |
 | `SELECT 1 + 1`               | `2`              |
@@ -52,6 +53,7 @@ ORDER BY
 ~~~~
 
 Output:
+
 | contactLastname | contactFirstname |
 |-----------------|------------------|
 | Young           | Dorothy          |
@@ -64,6 +66,7 @@ Output:
 | Urs             | Braun            |
 | Tseng           | Jerry            |
 | Tonini          | Daniel           |
+
 ...
 
 | 명령어                       | 설명              |
@@ -94,6 +97,7 @@ ORDER BY FIELD(status,
 ~~~~
 
 output:
+
 | orderNumber | status     |
 |-------------|------------|
 |       10425 | In Process |
@@ -106,6 +110,7 @@ output:
 |       10401 | On Hold    |
 |       10334 | On Hold    |
 |       10407 | On Hold    |
+
 ...
 
 각각의 위치값을 `ASC` 방식으로 출력하게 되면 위와 같은 결과값이 나온다.
@@ -137,10 +142,12 @@ WHERE
 ~~~~
 
 output: 
+
 | lastname | firstname | jobtitle  | officeCode |
 |----------|-----------|-----------|------------|
 | Jennings | Leslie    | Sales Rep | 1          |
 | Thompson | Leslie    | Sales Rep | 1          |
+
 2 rows in set (0.00 sec)
 
 - **`Between A AND B` 연산자**
@@ -158,6 +165,7 @@ ORDER BY officeCode;
 ~~~~
 
 output: 
+
 | firstName | lastName  | officeCode |
 |-----------|-----------|------------|
 | Diane     | Murphy    | 1          |
@@ -170,6 +178,7 @@ output:
 | Steve     | Patterson | 2          |
 | Foon Yue  | Tseng     | 3          |
 | George    | Vanauf    | 3          |
+
 10 rows in set (0.00 sec)
 
 - `LIKE` 연산자: 특정 패턴에 `TRUE`를 반환하는 데이터를 추출
@@ -191,12 +200,14 @@ ORDER BY firstName;
 ~~~~
 
 output:
+
 | firstName | lastName  |
 |-----------|-----------|
 | Leslie    | Thompson  |
 | Mary      | Patterson |
 | Steve     | Patterson |
 | William   | Patterson |
+
 4 rows in set (0.00 sec)
 
 - `IN` 연산자: list 안에 있는 값들 중 한 개라도 매칭되는 데이터 추출
@@ -215,6 +226,7 @@ ORDER BY
 ~~~~
 
 output:
+
 | firstName | lastName  | officeCode |
 |-----------|-----------|------------|
 | Diane     | Murphy    | 1          |
@@ -227,6 +239,7 @@ output:
 | Steve     | Patterson | 2          |
 | Foon Yue  | Tseng     | 3          |
 | George    | Vanauf    | 3          |
+
 10 rows in set (0.00 sec)
 
 - `IS NULL` 연산자: 값이 `NULL`인 데이터를 추출 (숫자 0이나 빈 문자열과는 다름)
@@ -243,9 +256,11 @@ WHERE
 ~~~~
 
 output:
+
 | lastName | firstName | reportsTo |
 |----------|-----------|-----------|
 | Murphy   | Diane     |      NULL |
+
 1 row in set (0.01 sec)
 
 - 비교 연산자
@@ -271,6 +286,7 @@ WHERE
 ~~~~
 
 output:
+
 | lastname  | firstname | jobtitle             |
 |-----------|-----------|----------------------|
 | Murphy    | Diane     | President            |
@@ -279,6 +295,7 @@ output:
 | Patterson | William   | Sales Manager (APAC) |
 | Bondur    | Gerard    | Sale Manager (EMEA)  |
 | Bow       | Anthony   | Sales Manager (NA)   |
+
 6 rows in set (0.00 sec)
 
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';`: 비밀번호 변경
