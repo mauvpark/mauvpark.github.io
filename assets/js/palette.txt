@@ -1,11 +1,27 @@
+! 자주 사용하는 이모티콘
 ❌❗️⭕️💯✅🚫 ☑️
 
+! 주제별 띄어쓰기
 <br/><br/>
 
+! 팁
 md 미리보기 ctrl + shift v
+
+! 이미지
 
 <p align="center">
   <img src="" width="450" title="">
 </p>
 
 <br/>
+
+! 미리 보기 및 코드 예시
+
+<div class="code-example" markdown="1">
+
+[Link button](http://example.com/){: .btn }
+
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+```
