@@ -4,8 +4,11 @@
 ! 주제별 띄어쓰기
 <br/><br/>
 
-! 팁
-md 미리보기 ctrl + shift v
+! vscode
+md 미리보기 ctrl + shift + v
+
+! 터미널
+로컬 환경 실행: bundle exec jekyll serve
 
 ! 이미지
 
