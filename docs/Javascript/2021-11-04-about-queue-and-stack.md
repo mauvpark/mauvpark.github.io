@@ -11,6 +11,18 @@ comments: false
 *2021-11-04 19:37 작성*
 
 # Queue와 Stack의 개념과 예시(+ Heap)
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 ## 1. 도입
 
