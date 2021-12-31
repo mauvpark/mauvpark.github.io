@@ -13,7 +13,7 @@ md 미리보기 ctrl + shift + v
 ! 이미지
 
 <p align="center">
-  <img src="" width="450" title="">
+  <img src="" width="450" alt="">
 </p>
 
 <br/>
