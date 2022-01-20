@@ -2,7 +2,8 @@
 layout: post
 title: "5. Type Manipulation"
 date: 2021-11-16 17:00:00 +0900
-parent: Typescript
+parent: Cheatsheet
+grand_parent: Typescript
 categories: typescript, cheat-sheet
 nav_order: 2
 comments: false
