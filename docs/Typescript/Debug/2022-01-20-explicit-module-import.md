@@ -11,6 +11,8 @@ comments: false
 
 *2022-01-20 18:09 작성*
 
+*2022-01-20 18:33 수정*
+
 # `d.ts`에서의 명시적 Module import에 관해
 {: .no_toc }
 
@@ -113,9 +115,20 @@ declare module 'assets/*.png' {
 ```javascript
 // d.ts
 // navigate type error가 발생했을 때 수정 방안
-import '@react-navigation/native';
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
+// declare const 형태의 type이 있을 경우 import를 적용하면 declare const가 제대로 적용되지 않음.
+// 따라서 node에서 사용하는 Require을 대안으로 사용할 수 있음.
+
+// import '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
+// import { StackNavigationProp } from '@react-navigation/stack';
+
+// Workaround
+require('@react-navigation/native');
+const { useNavigation } = require('@react-navigation/native');
+const { StackNavigationProp } = require('@react-navigation/stack');
+
+// import 사용시 아래의 example이 적용 안 되는 문제 발생
+declare const example: (hello: string) => string;
 
 declare module '@react-navigation/native' {
   export function useNavigation(): StackNavigationProp<any>;
