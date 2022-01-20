@@ -2,7 +2,8 @@
 layout: post
 title: "7. Modules"
 date: 2021-11-19 15:52:00 +0900
-parent: Typescript
+parent: Cheatsheet
+grand_parent: Typescript
 categories: typescript, cheat-sheet
 nav_order: 2
 comments: false
