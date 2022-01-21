@@ -11,7 +11,7 @@ comments: false
 
 *2022-01-20 18:09 작성*
 
-*2022-01-20 18:33 수정*
+*2022-01-21 10:36 수정*
 
 # `d.ts`에서의 명시적 Module import에 관해
 {: .no_toc }
@@ -110,30 +110,71 @@ declare module 'assets/*.png' {
 
 또한, 상기의 declare module은 사용하는 Library나 기존 components의 hard한 type 지정 및 타입 에러 수정에 응용 될 수 있다. 다음은 react-navigation에서 `navigate` Method type이 존재하지 않아 발생하는 Type error를 수정하는 방법이다.
 
-> 아래의 방법을 통해 매번 `useNavigation<StackNavigationProp<any>>()` 할 수고를 덜 수 있게 된다.
+> _아래의 방법을 통해 매번 `useNavigation<StackNavigationProp<any>>()` 할 수고를 덜 수 있게 된다._
+
+### Advanced 시행착오1
 
 ```javascript
-// d.ts
+// 최상위 디렉토리의 parent.d.ts
 // navigate type error가 발생했을 때 수정 방안
+
+import '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+
 // declare const 형태의 type이 있을 경우 import를 적용하면 declare const가 제대로 적용되지 않음.
-// 따라서 node에서 사용하는 Require을 대안으로 사용할 수 있음.
+// import 사용시 아래의 example이 적용되지 않아 Workaround로 require를 사용해봤으나 제대로 Import가 되지 않음.
+// 따라서 parent folder와 child folder의 d.ts로 구분해 설정을 하는 방법을 생각해보는 것도 고려해볼 것.
 
-// import '@react-navigation/native';
-// import { useNavigation } from '@react-navigation/native';
-// import { StackNavigationProp } from '@react-navigation/stack';
+// require('@react-navigation/native');
+// const { useNavigation } = require('@react-navigation/native');
+//const { StackNavigationProp } = require('@react-navigation/stack');
 
-// Workaround
-require('@react-navigation/native');
-const { useNavigation } = require('@react-navigation/native');
-const { StackNavigationProp } = require('@react-navigation/stack');
-
-// import 사용시 아래의 example이 적용 안 되는 문제 발생
-declare const example: (hello: string) => string;
+// declare const example: (hello: string) => string;
 
 declare module '@react-navigation/native' {
   export function useNavigation(): StackNavigationProp<any>;
 }
 ```
+
+### Advanced 개선방안
+
+1. Parent directory `parent.d.ts`
+
+    ```javascript
+    // project components와는 관계없는 third party libraries 등
+    import '@react-navigation/native';
+    import { useNavigation } from '@react-navigation/native';
+    import { StackNavigationProp } from '@react-navigation/stack';
+
+    declare module '@react-navigation/native' {
+      export function useNavigation(): StackNavigationProp<any>;
+    }
+    ```
+
+2. Child directory `src.d.ts`
+
+    ```javascript
+    // project와 관련된 global type 지정
+    type Measure = string;
+
+    declare const example: (hello: string) => string;
+
+    declare module 'assets/*.png' {
+      const value: any;
+      export = value;
+    }
+    ```
+
+3. `tsconfig.json` 설정
+
+    ```json
+    {
+      ...
+      "include": ["**/*.d.ts"],
+      ...
+    }
+    ```
 
 ## 참조
 
