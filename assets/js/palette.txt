@@ -18,6 +18,9 @@ md 미리보기 ctrl + shift + v
 
 <br/>
 
+! 폰트 크기
+<font size="2"></font>
+
 ! 미리 보기 및 코드 예시
 
 <div class="code-example" markdown="1">
