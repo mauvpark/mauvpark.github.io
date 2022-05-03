@@ -44,12 +44,16 @@ useEffect(() => {
     document.getElementById('target').scrollIntoView();
 }, [])
 
+const containerStyle = {width: '100vw', height: '100vh'};
+const apiDataStyle = {width: '100vw', height: 100, background: 'blue'};
+const targetStyle = {width: '100vw', height: 500, background: 'green'};
+
 return (
-  <div style={{width: '100vw', height: '100vh'}}>
+  <div style={containerStyle}>
   {data.map((e, i) => 
-    <div key={i} style={{width: '100vw', height: 100}}>{e.name}</div>
+    <div key={i} style={apiDataStyle}>{e.name}</div>
   )}
-    <div id='target' style={{width: '100vw', height: 500}}>target</div>
+    <div id='target' style={targetStyle}>target</div>
   </div>
 )
 ```
@@ -83,12 +87,16 @@ useEffect(() => {
   }, 500)
 }, [])
 
+const containerStyle = {width: '100vw', height: '100vh'};
+const apiDataStyle = {width: '100vw', height: 100, background: 'blue'};
+const targetStyle = {width: '100vw', height: 500, background: 'green'};
+
 return (
-  <div style={{width: '100vw', height: '100vh'}}>
+  <div style={containerStyle}>
   {data.map((e, i) => 
-    <div key={i} style={{width: '100vw', height: 100}}>{e.name}</div>
+    <div key={i} style={apiDataStyle}>{e.name}</div>
   )}
-    <div id='target' style={{width: '100vw', height: 500}}>target</div>
+    <div id='target' style={targetStyle}>target</div>
   </div>
 )
 ```
