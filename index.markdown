@@ -4,6 +4,7 @@
 
 layout: home
 ---
+[![HitCount](https://hits.dwyl.com/mauvpark/mauvparkgithubio.svg?style=flat)](http://hits.dwyl.com/mauvpark/mauvparkgithubio)
 # 안녕하세요. 프론트엔드 개발자 모브입니다. 
 
 ## 깃허브: <https://github.com/mauvpark>
