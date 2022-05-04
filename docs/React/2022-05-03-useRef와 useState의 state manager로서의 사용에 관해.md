@@ -155,3 +155,12 @@ return (
 ```
 
 위와 같은 형태로 코드를 짜게 되면 무한 업데이트 되는 버그는 발생하지 않는다. useState와 달리 useRef는 참조를 통해 최신 데이터를 유지하지만 리렌더링은 하지 않기 때문이다. 따라서 위의 코드에서는 비동기 데이터를 로드하고 화면에 뿌리는 과정에서 특정 문자를 가진 경우 카운팅해 그 카운팅된 숫자가 특정 수를 넘어갈 경우 관련된 컴포넌트를 보여주게 된다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>
