@@ -44,3 +44,12 @@ comments: false
 5. 중복 되는 키가 있을 경우 주의 표시가 뜨고, 중복되지 않도록 않게 바꿔준다.
 
 p.s. cmd + a는 전체 선택이므로 중복이 있어 이전 입력 소스 전환 키인 ctrl + space 키로 바꾸어 쓰기로 결정, 현재 그럭저럭 적응해 가는 중이다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>

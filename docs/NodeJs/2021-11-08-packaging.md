@@ -56,6 +56,11 @@ export default randomNumberGenerator;
 1. [JavaScript Mastery](https://youtu.be/8FziherTC8M)
 2. [Published example](https://www.npmjs.com/package/mauv_rng)
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -2,12 +2,12 @@
 layout: page
 title: About
 permalink: /about/
-comments: true
+comments: false
 ---
 
 ## Who Am I?
 
-### Name: *HyeonMin*
+### Name: *HyeonMin Park*
 ### e-mail: *mauvpark@gmail.com*
 ### Nationality: *South Korea*
 ### Code skills: *JavaScript, React, React Native, TypeScript, SCSS, Redux, MobX etc...*
@@ -15,6 +15,11 @@ comments: true
 
 ### Hobbies: *Listening to music, Writing short novel, Traveling*
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>
