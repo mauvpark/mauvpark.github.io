@@ -10,6 +10,11 @@ layout: home
 ## 깃허브: <https://github.com/mauvpark>
 ## 소개 사이트: <https://mauv-page.vercel.app>
 
+### 최근 게시물
+
+- [URL 이름짓기(naming skill)를 통한 history 관리](docs/Javascript/2022-05-04-history-management-with-url-naming-skill.md)
+- [useRef와 useState의 state manager으로서의 사용에 관해](docs/React/2022-05-03-useref-and-usestate-use-cases-as-a-state-manager.md)
+
 <script src="https://utteranc.es/client.js"
         repo="mauvpark/mauvpark.github.io" 
         issue-term="pathname"
