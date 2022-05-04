@@ -158,7 +158,7 @@ return (
 
 <script src="https://utteranc.es/client.js"
         repo="mauvpark/mauvpark.github.io" 
-        issue-term="pathname"
+        issue-term="title"
         theme="github-light"
         label="comment"
         crossorigin="anonymous"
