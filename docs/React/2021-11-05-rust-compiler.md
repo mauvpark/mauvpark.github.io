@@ -40,6 +40,15 @@ Babel을 만든 Sebastian은 현재 Babel이 아닌 **Rome**이라는 Toolchain�
 
 앞으로 더 나은 개발 환경, 더 빠른 개발 환경에서 일한다는 것은 기쁜 일이지만 Rust compiler에 대해 이해하고 Rust에 대비할 필요성이 있을 듯 하다. 최근에 잠시 취업준비로 Rust를 중지하기는 했지만 이내 곧 다시 시작해야만 한다.
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+## 라이센스
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>

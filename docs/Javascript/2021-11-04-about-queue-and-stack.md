@@ -58,6 +58,15 @@ A. <https://www.guru99.com/stack-vs-heap.html> <br/>
 B. <https://cse.buffalo.edu/~shapiro/Courses/CSE116/notes10.html> <br/>
 C. <https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop>
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+## 라이센스
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>

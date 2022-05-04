@@ -102,3 +102,16 @@ return (
 ```
 
 잠시의 간격을 둠으로써 api 처리가 적당히 되는 시점에 조작을 하는 방식이다. 따라서 setTimeout이 종료되는 시점이 api가 데이터를 불러오는 시점과 같거나 늦어질 수록 정확한 지점에 scrolling이 될 것이라는 점을 예측할 수 있다.
+
+## 라이센스
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>
