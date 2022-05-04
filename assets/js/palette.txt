@@ -28,3 +28,15 @@ md 미리보기 ctrl + shift + v
 ```markdown
 [Link button](http://example.com/){: .btn }
 ```
+
+! 댓글
+<script src="https://utteranc.es/client.js"
+        repo="your-github-username/your-github-repo" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>
+
+theme: github-light, github-dark
