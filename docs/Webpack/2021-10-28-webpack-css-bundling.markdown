@@ -54,6 +54,15 @@ p {
 
 이런 것들을 고려해보았을 때, chunk를 너무 많이 나누게 되면 bundling 폴더의 크기가 증가할 것이라고 생각한다. 따라서 페이지 단위 혹은 Vendor(바뀌지 않는 module: node_modules)와 사용자 Javascript 파일 내지 css 파일로 나누는 것이 loading enhancement에도 좋은 영향을 주고 FOUC(Flash Of Unstyled Content)를 방지하며 bundling 파일도 적절하게 caching(캐싱: splitChunks를 통한 캐싱 방법에 대해 좀 더 알아볼 것)할 수 있지 않나 생각한다. 그리고 이러한 부분들은 Load velocity나 측정치를 보며 직접 확인해야 할 것 같다.
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+## 라이센스
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script>
