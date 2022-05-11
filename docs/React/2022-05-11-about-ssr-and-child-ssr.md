@@ -23,8 +23,6 @@ nav_order: 5
 
 ---
 
-[![HitCount](https://hits.dwyl.com/mauvpark/mauvparkgithubio/blob/gh-pages/docs/React/2022-05-11-about-ssr-and-child-ssrmd.svg?style=flat-square)](http://hits.dwyl.com/mauvpark/mauvparkgithubio/blob/gh-pages/docs/React/2022-05-11-about-ssr-and-child-ssrmd)
-
 ## SSR의 형태와 적용 이유
 
 ```js
