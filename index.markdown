@@ -12,6 +12,7 @@ layout: home
 
 ### 최근 게시물
 
+- [SSR(ServerSideRendering)과 Child Component에서의 적용 여부](docs/React/2022-05-11-about-ssr-and-child-ssr.md)
 - [URL 이름짓기(naming skill)를 통한 history 관리](docs/Javascript/2022-05-04-history-management-with-url-naming-skill.md)
 - [useRef와 useState의 state manager으로서의 사용에 관해](docs/React/2022-05-03-useref-and-usestate-use-cases-as-a-state-manager.md)
 
