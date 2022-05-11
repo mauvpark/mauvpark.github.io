@@ -23,8 +23,6 @@ nav_order: 5
 
 ---
 
-> [Mauv's Next Js Playground](https://github.com/mauvpark/next-js-playground)
-
 ## SSR의 형태와 적용 이유
 
 ```js
@@ -221,6 +219,10 @@ export default Ssr;
 ```
 
 위와 같이 SSR 데이터를 가져오게 되면, 하위 컴포넌트에 미리 로드한 데이터를 적용할 수 있으므로 순차적 로드를 하지 않고도 한 번에 모든 페이지를 로드할 수 있게 된다(waterfall 문제 해결).
+
+## 참고
+
+[Mauv's Next Js Playground](https://github.com/mauvpark/next-js-playground)
 
 ## 라이센스
 
