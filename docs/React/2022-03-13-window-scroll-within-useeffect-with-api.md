@@ -3,7 +3,7 @@ layout: post
 title: useEffect와 window scroll
 date: 2021-11-05 22:40:00 +0900
 parent: React
-categories: react, useEffect, scroll
+categories: react, use-effect, scroll
 nav_order: 3
 comments: false
 ---

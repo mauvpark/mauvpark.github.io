@@ -3,7 +3,7 @@ layout: post
 title: useRef와 useState의 state manager로서의 사용에 관해
 date: 2022-05-03 17:45:00 +0900
 parent: React
-categories: react, useEffect, useRef, state
+categories: react, use-effect, use-ref, state
 nav_order: 4
 comments: false
 ---

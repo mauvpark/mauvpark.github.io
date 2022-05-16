@@ -3,7 +3,7 @@ layout: post
 title: SSR(ServerSideRendering)과 Child Component에서의 적용 여부
 date: 2022-05-11 19:02:00 +0900
 parent: React
-categories: react, ssr, nextJs, waterfall
+categories: react, ssr, next-js, waterfall
 nav_order: 5
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Rust 컴파일러와 Framework의 방향에 대한 생각"
 date: 2021-11-05 23:20:00 +0900
 parent: React
-categories: react, rust, nextjs, compiler
+categories: react, rust, next-js, compiler
 nav_order: 2
 comments: false
 ---
