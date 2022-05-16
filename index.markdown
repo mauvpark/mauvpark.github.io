@@ -5,12 +5,12 @@
 layout: home
 ---
 [![HitCount](https://hits.dwyl.com/mauvpark/mauvparkgithubio.svg?style=flat&show=unique)](http://hits.dwyl.com/mauvpark/mauvparkgithubio)
-# 안녕하세요. 프론트엔드 개발자 모브입니다. 
+# 안녕하세요(HELLO). 프론트엔드 개발자 모브입니다(I AM A FRONT-END DEVELOPER MAUV). 
 
-## 깃허브: <https://github.com/mauvpark>
-## 소개 사이트: <https://mauv-page.vercel.app>
+## 깃허브(GITHUB): <https://github.com/mauvpark>
+## 소개 사이트(SELF-INTRODUCTION): <https://mauv-page.vercel.app>
 
-### 최근 게시물
+### 최근 게시물(RECENT POSTS)
 
 - [SSR(ServerSideRendering)과 Child Component에서의 적용 여부](docs/React/2022-05-11-about-ssr-and-child-ssr.md)
 - [URL 이름짓기(naming skill)를 통한 history 관리](docs/Javascript/2022-05-04-history-management-with-url-naming-skill.md)
