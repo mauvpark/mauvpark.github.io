@@ -65,7 +65,14 @@ disqus:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2022 Mauv Park. Distributed by an <a href=\"https://github.com/mauvpark/mauvpark.github.io/blob/gh-pages/LICENSE\">MIT license.</a>"
+footer_content: "<script src="https://utteranc.es/client.js"
+        repo="mauvpark/mauvpark.github.io" 
+        issue-term="pathname"
+        theme="github-light"
+        label="comment"
+        crossorigin="anonymous"
+        async>
+</script><br/>Copyright &copy; 2022 Mauv Park. Distributed by an <a href=\"https://github.com/mauvpark/mauvpark.github.io/blob/gh-pages/LICENSE\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
