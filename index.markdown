@@ -13,6 +13,7 @@ layout: home
 
 ### Recent posts
 
+- [How to manage i18n-js with React Native](docs/Localization/2022-07-25-i18nJs-with-reactNative.md)
 - [What was the purpose of blockchain?](docs/Blockchain/2022-06-21-what-was-the-purpose-of-blockchain.md)
 - [SSR(ServerSideRendering)과 Child Component에서의 적용 여부](docs/React/2022-05-11-about-ssr-and-child-ssr.md)
 - [URL 이름짓기(naming skill)를 통한 history 관리](docs/Javascript/2022-05-04-history-management-with-url-naming-skill.md)
