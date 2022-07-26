@@ -8,6 +8,7 @@ nav_order: 1
 ---
 
 *Written at 2022-07-25 23:56*
+*Modified at 2022-07-26 14:26*
 
 # How to manage i18n-js with React Native
 {: .no_toc }
@@ -149,7 +150,7 @@ export const Settings = ({navigation}) => {
 }
 ```
 
-`i18n.translations` has only one scope on the `Home` screen. i18n's scope is **global**, so you do not need to worry its scope will be lost.
+`i18n.translations` has only one scope on the `App` screen. i18n's scope is **global**, so you do not need to worry its scope will be lost.
 
 > If you want to keep tracking your scope easily, you could go with this solution.
 
@@ -180,9 +181,9 @@ export const Home = ({navigation}) => {
 
 We can use the `useEffect` hook to initialize scope but the problem is you could not track your scope after `i18n.translation` is changed. Because `useEffect` is executed after rendering.
 
-> `i18n.t()` must re-rendered after new translation scope is applied.
+> `i18n.t()` must be re-rendered after new translation scope is applied.
 
-You need to use asynchronous hook to update the value without missing translation. Let's suspense rendering your components until completing to load target translation.
+You need to use an asynchronous hook to update the value without missing translation. Let's suspense rendering your components until completing to load target translation.
 
 ```js
 // Home.js
@@ -217,9 +218,14 @@ export const Home = ({navigation}) => {
 
 > `navigation.addListener`'s focus event fired when the screen is focused every time. `isLoaded` will update the state when translation is changed.
 
-Okay, now you could manage your i18n texts. I recommend declaring your translation scope on a page, not each component. It will make your code complicate.
+## Conclusion
 
-How about your unique solution? Or do you have better solution? Share with others.
+Okay, now you could manage your i18n texts. Let's summarize. 
+1. `Missing translations` means your scope is not focused and possibly your scope is focusing on a previous scope or nothing is scoped.
+2. **Solution 1** can be complicated if your app is bigger. Maybe you would be suffered from creating each unique name. So I recommend declaring your translation scope per page, but not each component. It will make your code complicated.
+3. If you applied scope to your app, try restarting your app-building(Only if you can not find any other problem after applying scope and when `Missing translations` error happens).
+
+How about your unique solution? Or do you have a better solution? Share it with me. 👋
 
 <script src="https://utteranc.es/client.js"
         repo="mauvpark/mauvpark.github.io" 
