@@ -8,7 +8,7 @@ nav_order: 1
 ---
 
 *Written at 2022-07-25 23:56*
-*Modified at 2022-07-26 14:26*
+*Modified at 2022-07-26 16:00*
 
 # How to manage i18n-js with React Native
 {: .no_toc }
@@ -59,7 +59,7 @@ export default App => {
 const styles = StyleSheet.create({ ... }); 
 ```
 
-## Missing translations
+## Missing translation
 
 I read Expo's doc, and I coded it as follows.
 
@@ -221,9 +221,17 @@ export const Home = ({navigation}) => {
 ## Conclusion
 
 Okay, now you could manage your i18n texts. Let's summarize. 
-1. `Missing translations` means your scope is not focused and possibly your scope is focusing on a previous scope or nothing is scoped.
-2. **Solution 1** can be complicated if your app is bigger. Maybe you would be suffered from creating each unique name. So I recommend declaring your translation scope per page, but not each component. It will make your code complicated.
-3. If you applied scope to your app, try restarting your app-building(Only if you can not find any other problem after applying scope and when `Missing translations` error happens).
+1. `Missing translation` means your scope is not focused and possibly your scope is focusing on a previous scope or nothing is scoped.
+2. **Solution 1** can be complicated if your app is big. Maybe you would be suffered from creating each unique name. So I recommend declaring your translation scope per page, but not each component. It will make your code complicated.
+3. If you applied scope to your app, try restarting your app-building(Only if you can not find any other problem after applying scope and when `Missing translation` error happens).
+4. ❗ `i18n.t()` method should be used after `i18n.translations` is assigned, or you would get `Missing translation` error. So, if you declared `i18n.t()` in a static file that is being built during building time such as **error texts** you will get the `Missing translation`. To prevent it, you can make them as methods and inject `i18n`. Thus, it will update your recent `i18n.translations`. (i18n-js version 3.9.2)
+
+```js
+export const example = (i18n) => {
+    return i18n.t("tv")
+} 
+```
+
 
 How about your unique solution? Or do you have a better solution? Share it with me. 👋
 
