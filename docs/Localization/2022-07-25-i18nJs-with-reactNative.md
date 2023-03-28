@@ -24,6 +24,8 @@ nav_order: 1
 
 ---
 
+# 🚫 This doc is deprecated as i18n-js version is newly updated
+
 ## Introduction
 
 [i18n-js](https://github.com/fnando/i18n-js) is a simple tool that can manage localization in your app. It could be used when you want to publish your app globally by applying each country's language.
