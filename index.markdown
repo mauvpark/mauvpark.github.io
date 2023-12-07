@@ -13,6 +13,7 @@ layout: home
 
 ### Recent posts
 
+- [NEXT JS 14 버전의 App Router와 Pages Router 그리고 App Router의 Middleware trigger 공백 시간에 대해](docs/React/2023-12-07-nextjs-version14-router-cache.md)
 - [useReducer와 useSyncExternalStore의 사용방법에 대한 정리](docs/React/2023-09-25-comparison-between-useReducer-and-useSyncExternalStore.md)
 - [백엔드 개발자를 위한 공통 컴포넌트 구조 설계](docs/React/2023-09-18-component-architecture-for-backend.md)
 - [How to manage i18n-js with React Native](docs/Localization/2022-07-25-i18nJs-with-reactNative.md)
