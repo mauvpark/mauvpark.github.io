@@ -388,3 +388,5 @@ import express = require("express");
 이런 예시들은 라이브러리는 `esModuleInterop`을 활성화 해서는 *안 된다*는 관습적인 지혜에 따른 것입니다. 이러한 조언은 의미 있는 시작점입니다. 그러나 앞서 namespace import의 타입이 변하는 예시를 보았듯이, `esModuleInterop`을 활성화 했을 때, 잠재적으로 에러를 _가져옵니다_. 그래서 라이브러리들을 `esModuleInterop`과 함께 컴파일 할지 안 할지는, 라이브러리 개발자의 선택지를 사용자들에게 감염시킬지 여부를 선택하는 것과 같으므로 유의해야 합니다.
 
 라이브러리 작성자들은 최대의 호환성을 보장하려고 하기 때문에 컴파일러 옵션을 쓰지 않는 방식으로 declaration files를 검증하려고 할 것입니다. 하지만 `verbatimeModuleSyntax`를 사용하는 것은 CommonJS로-emit하는 파일들을 CommonJS-스타일로 import하고 export하도록 하는 문법을 강제하는 것으로써 `esModuleInterop`과 관련된 문제를 완전히 피하는 것입니다. 게다가 `esModuleInterop`은 오직 CommonJS에만 영향을 미치므로 점점 더 많은 라이브러리들이 오직-ESM만 퍼블리싱하는 것으로 옮겨감에 따라 이 문제의 관계성은 점점 줄어들 것입니다.
+
+[참고 gist](https://gist.github.com/mauvpark/b17abcc5a0b4453e06e75aed87a01611)
