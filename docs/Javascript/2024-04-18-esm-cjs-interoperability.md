@@ -79,7 +79,7 @@ module.exports = function hello() {
 하지만 CommonJS 모듈들은 종종 위와 같은 형식으로 존재하고는 합니다. 트랜스파일러로 처리되어, ESM import 형태로 이 모듈에 접근하는 방법은 무엇이 있을까요? 우리는 namespace import(`import *`)를 기본적인 `require` 호출 방식으로 변환하는 것을 규명했습니다. 그래서 우리는 다음과 같이 입력을 지원할 수 있다고 생각할 수 있습니다.
 
 ```javascript
-import * as hello from "./exports-function"; // INFO 결과값: [Module: null prototype] { default: [Function: doSomething] }
+import * as hello from "./exports-function"; // INFO 결과값: [Module: null prototype] { default: [Function: hello] }
 hello();
 
 // 아래와 같이 변환된다.
