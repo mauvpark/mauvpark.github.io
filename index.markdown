@@ -15,8 +15,8 @@ layout: home
 
 ### Recent posts
 
-- [useEffect cleanup 함수와 dependency 정리](docs\React\2024-04-23-useEffect-tips.md)
-- [(번역)ESM과 CJS의 상호운용성에 관해](docs\Javascript\2024-04-18-esm-cjs-interoperability.md)
+- [useEffect cleanup 함수와 dependency 정리](docs/React/2024-04-23-useEffect-tips.md)
+- [(번역)ESM과 CJS의 상호운용성에 관해](docs/Javascript/2024-04-18-esm-cjs-interoperability.md)
 - [NEXT JS 14 버전의 App Router와 Pages Router 그리고 App Router의 Middleware trigger 공백 시간에 대해](docs/React/2023-12-07-nextjs-version14-router-cache.md)
 - [useReducer와 useSyncExternalStore의 사용방법에 대한 정리](docs/React/2023-09-25-comparison-between-useReducer-and-useSyncExternalStore.md)
 
