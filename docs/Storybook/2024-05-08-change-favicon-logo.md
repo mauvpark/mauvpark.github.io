@@ -1,17 +1,13 @@
 ---
 layout: post
 title: How to change favicon and logo in Storybook 8
+description: change favicon, change logo, Storybook 8
 date: 2024-05-08 00:00:00 +0900
 parent: Storybook
-categories: Storybook, favicon, logo
+categories: Storybook
 nav_order: 3
 comments: false
 ---
-
-<head>
-  <meta name="description" content="Change favicon and logo tip, Storybook 8">
-  <meta name="og:description" content="Change favicon and logo tip, Storybook 8">
-</head>
 
 _2024-05-08 작성_
 
