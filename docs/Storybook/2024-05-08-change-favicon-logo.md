@@ -8,6 +8,11 @@ nav_order: 3
 comments: false
 ---
 
+<head>
+  <meta name="description" content="Change favicon and logo tip, Storybook 8">
+  <meta name="og:description" content="Change favicon and logo tip, Storybook 8">
+</head>
+
 _2024-05-08 작성_
 
 # How to change favicon and logo in Storybook 8
@@ -90,4 +95,4 @@ addons.setConfig({
 
 All done! Check out your logo and favicon are at right place. If you have any problem with this tip, please let me know by issuing in my github.
 
-https://github.com/mauvpark/mauvpark.github.io/issues
+[Issue page](https://github.com/mauvpark/mauvpark.github.io/issues)
