@@ -15,6 +15,7 @@ layout: home
 
 ### Recent posts
 
+- [Use case of useRef which substitutes for useState](docs/React/2024-05-24-useRef-store-state.md)
 - [How to change favicon and logo in Storybook 8](docs/Storybook/2024-05-08-change-favicon-logo.md)
 - [useEffect cleanup 함수와 dependency 정리](docs/React/2024-04-23-useEffect-tips.md)
 - [(번역)ESM과 CJS의 상호운용성에 관해](docs/Javascript/2024-04-18-esm-cjs-interoperability.md)
