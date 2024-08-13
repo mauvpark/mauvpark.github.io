@@ -15,6 +15,7 @@ layout: home
 
 ### Recent posts
 
+- [How to use UseSuspenseQuery with Next js's Pages Router](docs/React/2024-08-13-use-suspense-query-with-pages-router.md)
 - [Use case of useRef which substitutes for useState](docs/React/2024-05-24-useRef-store-state.md)
 - [How to change favicon and logo in Storybook 8](docs/Storybook/2024-05-08-change-favicon-logo.md)
 - [useEffect cleanup 함수와 dependency 정리](docs/React/2024-04-23-useEffect-tips.md)
