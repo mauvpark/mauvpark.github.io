@@ -9,7 +9,7 @@ nav_order: 3
 comments: false
 ---
 
-_2024-08-13 작성_
+_2024-08-16 업데이트_
 
 # How to use UseSuspenseQuery with Next js's Pages Router
 
@@ -54,63 +54,102 @@ const MyPage = () => {
 
 ### `useSuspenseQuery()` lazy load
 
-In Pages Router, `useSuspenseQuery()` with dynamically imported component is drawn in client side very first time and then the rendering is captured as server side html following an error message. It means somewhat reason `useSuspenseQuery()` is not fully rendered by client side, rather that is tangled in server side.
-
-To deal with this problem, needed to fetch `useSuspenseQuery()` in client side only. So I focused on `React.lazy()` wrapper for lazy load.
-
-First, I wanted to check 'Is `useSuspenseQuery()` fetched in client side only when I use `React.lazy()`?'.
+To use `useSuspenseQuery()`, you need a fallback component which is called `Suspense`.
 
 ```javascript
-// Component
-const ExampleComponent = () => {
+// ./doc
+const Doc = () => {
   const { data } = useSuspenseQuery({
-    queryKey: ["EXAMPLE_KEY"],
-    queryFn: () => axios.get("https://example.co.kr/myDoc"),
+    queryKey: ["DOCS"],
+    queryFn: () => axios.get("https://www.example.com/docs"),
   });
-
   return (
-    <>
+    <ul>
       {data.body.map((doc, index) => (
-        <div key={index}>{doc.name}</div>
+        <li key={index}>{doc.name}</li>
       ))}
-    </>
+    </ul>
   );
 };
 
-// export Component
-const LazyExample = React.lazy(async () => {
-  const Component = await import("./ExampleComponent");
+// ./suspenseDoc
+import Doc from "./doc";
+import Loader from "./loader";
 
-  return {
-    default: () => <Component.default />,
-  };
-});
+const SuspenseDoc = () => (
+  <Suspense fallback={<Loader />}>
+    <Doc />
+  </Suspense>
+);
 
-export default LazyExample;
+export default SuspenseDoc;
 ```
 
-As a result, It threw an error that it can't pre-render so those renderings will be passed to client side rendering.
+### Cases of using both useSuspenseQuery and dynamic altogether
 
-So, `lazy` wrapper is fully passing component rendering to client side. To remove the error, it seems including `dynamic()` would be the solution.
+#### Case 1
 
 ```javascript
-const LazyExample = dynamic(() => import("./lazyExample"), {
-  ssr: false,
-  loading: () => <Loading />,
-});
-
-const Page = () => {
+// ./doc
+const Doc = () => {
+  const { data } = useSuspenseQuery({
+    queryKey: ["DOCS"],
+    queryFn: () => axios.get("https://www.example.com/docs"),
+  });
   return (
-    <Suspense fallback={<Loading />}>
-      <LazyExample />
-    </Suspense>
+    <ul>
+      {data.body.map((doc, index) => (
+        <li key={index}>{doc.name}</li>
+      ))}
+    </ul>
   );
 };
+
+// ./page
+const Doc = dynamic(() => import("/doc"), { ssr: false, loading: <Loader /> });
+
+const Page = () => (
+  <Suspense fallback={<Loader />}>
+    <Doc />
+  </Suspense>
+);
 ```
 
-`dynamic()`'s `loading` property is for the lazy component. And `Suspense`'s `fallback` attribute is for the `useSuspenseQuery()`'s lazy data. Finally hydration error was gone from my project.
+When you use this code, you will face a following error.
 
-Pages Router tries to render in server side as much as possible. This is not the official solution but if you want to deal with hydration error, you could try this.
+_Error: The server could not finish this Suspense boundary, likely due to an error during server rendering. Switched to client rendering._
+
+This means Next js handles `Suspense` from server default. But `Suspense` should be rendered from client side so this is not the what we are expecting.
+
+#### Case 2
+
+```javascript
+// ./suspenseDoc
+import Doc from "./doc";
+import Loader from "./loader";
+
+const SuspenseDoc = () => (
+  <Suspense fallback={<Loader />}>
+    <Doc />
+  </Suspense>
+);
+
+export default SuspenseDoc;
+
+// ./page
+const SuspenseDoc = dynamic(() => import("/suspenseDoc"), {
+  ssr: false,
+  loading: <Loader />,
+});
+
+const Page = () => <SuspenseDoc />;
+```
+
+Next js's `dynamic()` with `{ssr: false}` option will make component be rendered from client side. Then we can expect `Suspense` in dynamic component also will be rendered in client side. So, it means there will be no hydration error.
+
+## Conclusion
+
+After I tested [Case2](#case-2), finally I got the lazy component with `useSuspenseQuery()` with no hydration error.
 
 <script src="https://utteranc.es/client.js"
         repo="mauvpark/mauvpark.github.io" 
