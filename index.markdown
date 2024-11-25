@@ -15,6 +15,7 @@ layout: home
 
 ### Recent posts
 
+- [(요약)효과적인 Dart 코딩을 위한 체크리스트](docs/Dart/2024-11-25-checklist.md)
 - [How to use UseSuspenseQuery with Next js's Pages Router](docs/React/2024-08-13-use-suspense-query-with-pages-router.md)
 - [Use case of useRef which substitutes for useState](docs/React/2024-05-24-useRef-store-state.md)
 - [How to change favicon and logo in Storybook 8](docs/Storybook/2024-05-08-change-favicon-logo.md)
