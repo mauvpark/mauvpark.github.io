@@ -4,7 +4,7 @@ title:  "Webpack css bundling에 관해"
 date:   2021-10-28 20:08:05 +0900
 parent: Webpack
 categories: webpack
-nav_order: 2
+nav_order: 3
 comments: false
 ---
 

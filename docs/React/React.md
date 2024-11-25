@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Home
 title: React
 nav_order: 2
 has_children: true

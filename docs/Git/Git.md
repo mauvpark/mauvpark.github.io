@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Home
 title: Git
 nav_order: 2
 has_children: true

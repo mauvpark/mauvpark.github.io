@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Home
 title: Dart
 nav_order: 2
 has_children: true

@@ -3,6 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Home
+nav_order: 1
 ---
 
 [![HitCount](https://hits.dwyl.com/mauvpark/mauvparkgithubio.svg?style=flat&show=unique)](http://hits.dwyl.com/mauvpark/mauvparkgithubio)
