@@ -17,6 +17,7 @@ nav_order: 1
 
 ### Recent posts
 
+- [(번역) Next 14 버전과 Next 15 버전의 차이 정리](docs/React/2025-01-10-difference-between-next14-and-next15.md)
 - [(요약)효과적인 Dart 코딩을 위한 체크리스트](docs/Dart/2024-11-25-checklist.md)
 - [How to use UseSuspenseQuery with Next js's Pages Router](docs/React/2024-08-13-use-suspense-query-with-pages-router.md)
 - [Use case of useRef which substitutes for useState](docs/React/2024-05-24-useRef-store-state.md)
