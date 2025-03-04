@@ -4,7 +4,7 @@ title: useShallow를 이용한 zustand 최적화
 description: useShallow hook을 이용해 컴포넌트 리렌더링을 관리해봅니다.
 date: 2025-02-27 00:00:00 +0900
 parent: React
-categories: react,zustand,useShallow,shallow,optimization,rendering
+categories: react,zustand,useShallow,shallow,optimization,rendering,nextjs
 nav_order: 3
 ---
 
@@ -24,6 +24,8 @@ _2025-02-27_
 </details>
 
 ---
+
+_2025-03-04 NEXT JS 환경 반영_
 
 ## Intro
 
@@ -48,6 +50,66 @@ Zustand 5.x.x 버전 이후부터는 `useShallow`라는 hook이 제공됩니다.
 아래의 store가 있다고 생각해봅시다.
 
 [참고](https://zustand.docs.pmnd.rs/guides/slices-pattern)
+
+### NEXT JS를 사용하는 경우 [참고](https://github.com/pmndrs/zustand/blob/main/docs/guides/nextjs.md)
+
+```javascript
+// store.ts
+export const createFishSlice = (set) => ({
+  fishes: 0,
+  addFish: () => set((state) => ({ fishes: state.fishes + 1 })),
+})
+
+export const createBearSlice = (set) => ({
+  bears: 0,
+  addBear: () => set((state) => ({ bears: state.bears + 1 })),
+  eatFish: () => set((state) => ({ fishes: state.fishes - 1 })),
+})
+
+expot const createBoundStore = () => createStore((...a) => ({
+    ...createBearSlice(...a),
+    ...createFishSlice(...a),
+}))
+```
+
+```javascript
+// provider.tsx
+import { useStore } from 'zustand'
+import {createBoundStore} from './store';
+
+export const BoundStoreContext = createContext(undefined);
+
+export const BoundStoreProvider = ({children}) => {
+    // 타겟 위치마다 새롭게 생성
+    const storeRef = useRef(null);
+    if (!storeRef.current) {
+        storeRef.current = createBoundStore();
+    }
+
+    return (
+        <BoundStoreContext.Provider value={storeRef.current}>
+            {children}
+        </BoundStoreContext.Provider>
+    )
+}
+
+export const useBoundStore = (selector) => {
+    const boundStoreContext = useContext(BoundStoreContext);
+
+    // Provider와 같이 사용하지 않은 경우 에러 발생
+    if (!boundStoreContext) {
+        throw new Error("useBoundStore는 BoundStoreProvider와 함께 사용해야 합니다.");
+    }
+
+    return useStore(boundStoreContext, selector);
+}
+```
+
+NEXT JS에서 위와 같이 설정하지 않고 사용하게 되면, 페이지와 페이지 간 상태가 공유되어 예상치 못한 버그가 발생할 수 있습니다.
+
+그러므로 NEXT JS를 사용할 때는 이러한 버그를 예방하기 위해서, 상기의 방식처럼 매 route request 마다 새로운 store를 생성하는 전략을 취할 수 있습니다.
+
+### 다른 프레임워크를 사용하는 경우
 
 ```javascript
 import { create } from 'zustand';
@@ -98,6 +160,19 @@ const Sea = () => {
     )
 }
 
+// NEXT JS
+export default const App = () => {
+    return (
+        <>
+            <BoundStoreProvider>
+                <BearHouse />
+                <Sea />
+            </BoundStoreProvider>
+        </>
+    )
+}
+
+// 그 외 프레임워크
 export default const App = () => {
     return (
         <>
@@ -140,6 +215,19 @@ const Sea = () => {
     )
 }
 
+// NEXT JS
+export default const App = () => {
+    return (
+        <>
+            <BoundStoreProvider>
+                <BearHouse />
+                <Sea />
+            </BoundStoreProvider>
+        </>
+    )
+}
+
+// 그 외 프레임워크
 export default const App = () => {
     return (
         <>
