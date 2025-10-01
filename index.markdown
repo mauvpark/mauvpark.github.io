@@ -17,6 +17,7 @@ nav_order: 1
 
 ### Recent posts
 
+- [SDD 개발 방법론](docs/Ai/2025-10-01-sdd.md)
 - [HTML Tag Cheat Sheet](docs/Front-end/HTML/2025-05-07-html-tag-cheatsheet.md)
 - [useShallow를 이용한 zustand 최적화](docs/React/2025-02-27-zustand-optimization-with-useShallow.md)
 - [(번역) Next 14 버전과 Next 15 버전의 차이 정리](docs/React/2025-01-10-difference-between-next14-and-next15.md)
